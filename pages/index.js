@@ -62,20 +62,18 @@ export async function getStaticProps() {
   // const httpsAgent = new https.Agent({
   //   rejectUnauthorized: false,
   // });
-  const exploreData = await fetch("https://links.papareact.com/pyp",{
+  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G",{
     method: 'GET',
     headers: {
       accept: 'application/json',
     },
-    body: "",
   }).then((res) => res.json());
 
-  const cardsData = await fetch("https://links.papareact.com/zp1",{
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT",{
     method: 'GET',
     headers: {
       accept: 'application/json',
     },
-    body: "",
   }).then((res) => res.json());
 
   return {

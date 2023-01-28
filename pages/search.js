@@ -79,12 +79,11 @@ export async function getServerSideProps() {
   //   rejectUnauthorized: false,
   // });
 
-  const searchResults = await fetch("https://links.papareact.com/isz",{
+  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS",{
     method: 'GET',
     headers: {
       accept: 'application/json',
     },
-    body: "",
   }).then(
     (res) => res.json()
   );
