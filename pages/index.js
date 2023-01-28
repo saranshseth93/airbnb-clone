@@ -62,9 +62,19 @@ export async function getStaticProps() {
   // const httpsAgent = new https.Agent({
   //   rejectUnauthorized: false,
   // });
-  const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
+  const exploreData = await fetch("https://links.papareact.com/pyp",{
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+    },
+  }).then((res) => res.json());
 
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
+  const cardsData = await fetch("https://links.papareact.com/zp1",{
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+    },
+  }).then((res) => res.json());
 
   return {
     props: {

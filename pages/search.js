@@ -79,7 +79,12 @@ export async function getServerSideProps() {
   //   rejectUnauthorized: false,
   // });
 
-  const searchResults = await fetch("https://links.papareact.com/isz").then(
+  const searchResults = await fetch("https://links.papareact.com/isz",{
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+    },
+  }).then(
     (res) => res.json()
   );
 
