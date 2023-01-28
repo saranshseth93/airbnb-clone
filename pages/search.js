@@ -84,6 +84,7 @@ export async function getServerSideProps() {
     headers: {
       accept: 'application/json',
     },
+    body: "",
   }).then(
     (res) => res.json()
   );

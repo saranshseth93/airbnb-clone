@@ -67,6 +67,7 @@ export async function getStaticProps() {
     headers: {
       accept: 'application/json',
     },
+    body: "",
   }).then((res) => res.json());
 
   const cardsData = await fetch("https://links.papareact.com/zp1",{
@@ -74,6 +75,7 @@ export async function getStaticProps() {
     headers: {
       accept: 'application/json',
     },
+    body: "",
   }).then((res) => res.json());
 
   return {
