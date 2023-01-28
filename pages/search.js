@@ -72,16 +72,14 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const https = require("https");
-  const fetch = require("node-fetch");
+  // const https = require("https");
+  // const fetch = require("node-fetch");
 
-  const httpsAgent = new https.Agent({
-    rejectUnauthorized: false,
-  });
+  // const httpsAgent = new https.Agent({
+  //   rejectUnauthorized: false,
+  // });
 
-  const searchResults = await fetch("https://links.papareact.com/isz", {
-    agent: httpsAgent,
-  }).then(
+  const searchResults = await fetch("https://links.papareact.com/isz").then(
     (res) => res.json()
   );
 

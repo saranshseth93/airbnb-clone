@@ -56,19 +56,15 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  const https = require("https");
-  const fetch = require("node-fetch");
+  // const https = require("https");
+  // const fetch = require("node-fetch");
 
-  const httpsAgent = new https.Agent({
-    rejectUnauthorized: false,
-  });
-  const exploreData = await fetch("https://links.papareact.com/pyp", {
-    agent: httpsAgent,
-  }).then((res) => res.json());
+  // const httpsAgent = new https.Agent({
+  //   rejectUnauthorized: false,
+  // });
+  const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
 
-  const cardsData = await fetch("https://links.papareact.com/zp1", {
-    agent: httpsAgent,
-  }).then((res) => res.json());
+  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
 
   return {
     props: {
